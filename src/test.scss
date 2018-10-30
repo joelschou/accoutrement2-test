@@ -1,0 +1,140 @@
+// core and all plugins (also available with `/index`)
+@import 'sass/tools';
+
+// init normalization
+@import 'sass/init';
+
+
+$colors: (
+    P1: rgb(25, 129, 139),
+    P2: rgb(118, 10, 91),
+
+    S1: '#P1',
+    S2: '#P1',
+    S3: '#P1',
+    S4: '#P1',
+    S5: '#P1',
+
+    A1: purple,
+    A2: green,
+    A3: orange,
+    A4: red,
+
+    N0: white,
+    N1: mix( white, black, 10% ),
+    N2: mix( white, black, 20% ),
+    N3: mix( white, black, 30% ),
+    N4: mix( white, black, 40% ),
+    N5: mix( white, black, 50% ),
+    N6: mix( white, black, 60% ),
+    N7: mix( white, black, 70% ),
+    N8: mix( white, black, 80% ),
+    N9: mix( white, black, 90% ),
+    N10: black,
+
+    ui: (
+
+        background: (
+            background: '#N0',
+            ':hover': '#N2',
+            ':active': '#N1',
+        ),
+
+        text: (
+            color: '#N9',
+            ':hover': '#N7',
+            ':active': '#N10',
+            '|subtle': '#N7',
+            '|placeholder': '#N6',
+        ),
+
+        h1: (
+            color: '#N6',
+        ),
+        h2: (
+            color: '#N5',
+        ),
+        h3: (
+            color: '#N3',
+        ),
+        h4: (
+            color: '#N6',
+        ),
+        h5: (
+            color: '#N5',
+        ),
+        h6: (
+            color: '#N3',
+        ),
+
+        blockquote: (
+            color: inherit,
+            background: transparent,
+            border: none,
+        ),
+
+        code: (
+            color: ('#S8', '#N8'),
+            background: ('#S4', '#N1'),
+            border: none,
+        ),
+
+        codeblock: (
+            color: '#N1',
+            background: '#N8',
+            border: none,
+        ),
+
+        rule: '#N5',
+
+        link: (
+            color: '#P1',
+            ':hover': '#P13',
+            ':active': '#P17',
+            ':focus': '#N3',
+            outline: '#:focus',
+        ),
+
+        action: (
+            color: '#N8',
+            background: '#N1',
+            border: transparent,
+            '|emphasis': (
+                color: '#N0',
+                background: '#P1',
+                border: transparent,
+            ),
+            '|subtle': (
+                color: '#N5',
+                background: '#N',
+                border: transparent,
+            ),
+        ),
+
+        interaction: (
+            ':disabled': '#N',
+            ':hover': '#P13',
+            ':focus': '#P17',
+            ':active': '#P1',
+        ),
+
+        feedback: (
+            '|info': '#A1',
+            '|success': '#A2',
+            '|warn': '#A3',
+            '|error': '#A4'
+        )
+    )
+);
+
+@debug color( 'P1' );
+@debug color( 'ui' );
+@debug color( 'ui->action' );
+@debug color( 'ui->interaction' );
+@debug color( 'ui->feedback' );
+@debug color( 'ui->h1->color' );
+@debug color( 'ui->h2->color' );
+@debug color( 'ui->h3->color' );
+@debug color( 'ui->h4->color' );
+@debug color( 'ui->h5->color' );
+@debug color( 'ui->h6->color' );
